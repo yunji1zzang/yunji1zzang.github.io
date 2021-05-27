@@ -9,7 +9,11 @@
   *{
     font-family: 'Gaegu', cursive;
   }
-body {
+  img {
+    float: left;
+    width: 430px;
+    }
+  body { 
   margin:0;
   }
   h1{
@@ -36,10 +40,36 @@ body {
     display: grid;
     grid-template-columns: 350px 1fr;
   }
+  #article{
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+  #introduction { 
+    font-size: 20px;
+    float: left;
+    border:5px gray solid;
+    width:450px;
+    margin:20px;
+    padding:10px;
+    }  
+    @media(max-width:800px){
+    #grid{
+      display: block;
+    }
+    #grid ol{
+      border-right: none;
+      font-size:15px;
+      background-color:white;
+      }
+    h1 {
+      border-bottom:none;
+      font-size:30px;
+      background-color:white;
+      }
   </style>
 </head>
 <body>
-  <h1><a href="Hello.html">YUNJI WORLD</a></h1>
+  <h1><a href="MENU.html">YUNJI WORLD</a></h1>
   <div id="grid">
    <ol>
     <a href="welcome.html">💖 WELCOME</a><br>
@@ -47,18 +77,17 @@ body {
     <a href="fuy.html">💗 FUNNY</a><br>
     <a href="day.html">💗 DAILY</a><br>
     <a href="ss.html">💗 SNS</a><br>
+    <a href="BOOK.html">📕 BOOK</a><br>
  </ol>
- <div>
-   ＼😆へ　 へ😁ヘ　 く😎/<br>
-   ヘ / 　　　 ( ヘ　　 　( ヘ<br>
-   　 >　 　 <　　　　く<br>
-<img src="윤지.jpg" width="400"><br>
-I am a person and evening type. Because I'm taking a break from work. I quit my old job and am learning coding.<br>
-SO.. Welcome. My name is Yunji Han. I am 29 years eold and woman. I like my age very much. I'm old enough to start anything.<br>
-I've been interested in 'MBTI' lately. My MBTI is INFP-T type. I'm glad you're on the same wavelength as me.<br>
-And I am cute and pretty:), but sometimes I get emotional ups and downs.<br>
+ <div id="article">
+<img src="yj.jpg"><br>
+ <div id="introduction">
+I am a person and evening type.<br>Because I'm taking a break from work.<br>I quit my old job and am learning coding.<br>
+SO.. Welcome. My name is Yunji Han.<br>I am 29 years eold and woman.<br>I like my age very much.<br>I'm old enough to start anything.<br>
+I've been interested in 'MBTI' lately.<br> My MBTI is INFP-T type.<br>I'm glad you're on the same wavelength as me.<br>
+And I am cute and pretty:),<br>but sometimes I get emotional ups and downs.<br>
 Even so, I still love myself. </u>
- </div>
 </div>
+ </div>
 </body>
 </html>

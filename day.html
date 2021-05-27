@@ -9,7 +9,7 @@
   *{
     font-family: 'Gaegu', cursive;
   }
-body {
+  body {
   margin:0;
   }
   h1{
@@ -24,7 +24,7 @@ body {
   color:black;
   text-decoration: none;
   }
-  ol {
+  #grid ol{
   font-size:30px;
   border-right:0px solid;
   width:300px;
@@ -32,14 +32,45 @@ body {
   padding:20px;
   background-color:#E28FAD;
   }
-  #grid{
-    display: grid;
-    grid-template-columns: 340px 1fr;
+  #grid{    display: grid;
+    grid-template-columns: 310px 1fr;}
+  #article {
+    padding-left: 50px;
+    padding-top: 10px;
   }
+  #all {
+    display: grid;
+    grid-template-columns: 310px 1fr;
+    }
+  #coding ol
+    {float: left;
+    border:5px gray double;
+    width:100px;
+    margin:10px;
+    padding:20px;
+    }
+li {
+  font-size :20px;
+  }
+  @media(max-width:800px){
+    #grid{
+      display: block;
+    }
+    #grid ol{
+      border-right: none;
+      font-size:15px;
+      background-color:white;
+      }
+    h1 {
+      border-bottom:none;
+      font-size:30px;
+      background-color:white;
+      }
   </style>
 </head>
 <body>
-  <h1><a href="Hello.html">YUNJI WORLD</a></h1>
+  <h1><a href="MENU.html">YUNJI WORLD</a></h1>
+  <div id="all">
   <div id="grid">
    <ol>
     <a href="welcome.html">💖 WELCOME</a><br>
@@ -47,33 +78,26 @@ body {
     <a href="fuy.html">💗 FUNNY</a><br>
     <a href="day.html">💗 DAILY</a><br>
     <a href="ss.html">💗 SNS</a><br>
+    <a href="BOOK.html">📕 BOOK</a><br>
  </ol>
- <div>
-  <h2>윤지는 최근 운전면허증 합격하였다!<br></h2>
-    <h2><a href="box.html">합격후기</a> ☜Click</h2>
+ </div>
+ <div id="article">
+  <h2>✨I passed driver's license.</h2>
+    <a href="box.html"><font color="blue",font size="6px">합격후기 확인하기✌</font></a> ☜Click
     <br>
-    <h2>코딩 공부도 할 것이다!</h2>
-    <p><iframe width="548" height="134" src="https://www.youtube.com/embed/7T7r_oSp0SE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-<p><div id="disqus_thread"></div>
-    <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        /*
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://yunji-1.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></p>
-<p><!--Start of Tawk.to Script-->
+  <h2>✨I started coding.</h2>
+  <li>HTML</li>
+  <div id="coding">
+  <ol>
+    <li><a href="video.html">Insert video</a></li>
+    <li><a href="communication.html">communication</a></li>
+    </ol>
+    <li>CSS</li>
+    <ol>
+    <li><a href="mediaquery.html">Mediaquery</a></li><br>
+  </ol>
+  </div>
+  </div>
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
