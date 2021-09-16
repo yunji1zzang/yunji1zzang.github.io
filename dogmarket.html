@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, 
+initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>반려견 용품 중고거래 도그마켓</title>
+<link rel="author" href="도그마켓" />
+<link rel="stylesheet" media="all" href="css/style.css"/>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/reset.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery.bxslider.min.js"></script> <!-- jQuery bxSlider 형식을 참조합니다.-->
+<script src="js/isotope.pkgd.min.js"></script> <!-- isotope 플러그인을 활용합니다.-->
+<script src="js/common.js"></script>
+<script src="js/main.js"></script>
+</head>
+
+<body class="hoian-kr">
+<header id="fixed-bar">
+  <div id="fixed-bar-wrap">
+    <h1 id="fixed-bar-logo-title">
+      <a href="dogmarket.html">
+        <span class="sr-only">도그마켓</span>
+        <img class="fixed-logo" alt="도그마켓" src="images/dogmarket_logo.PNG" />
+</a>    
+</h1>
+    <section id="fixed-bar-search">
+      <div class="search-input-wrap">
+        <span class="sr-only">검색</span>
+        <input type="text" name="header-search-input" id="header-search-input" class="fixed-search-input" placeholder="어떤 물건을 찾아볼까요?" />
+        <button id="header-search-button">
+          <img class="fixed-search-icon" src="images/icon.jpg" />
+        </button>
+      </div>
+    </section>
+    <section class="fixed-bar-menu">
+      <div class="fixed-download-wrapper">
+        <input id="fixed-menu-checkbox" type="checkbox" class="fixed-checkbox" />
+        <label for="fixed-menu-checkbox" class="fixed-label">
+          다운로드
+          <svg class="menu-icon-svg" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L6 6L11 1" stroke="#4D5159" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </label>
+        <ul class="fixed-menu-ul">
+          <li>
+            <a target="_blank" class="menu-anchor" id="header-download-button-ios" href="https://itunes.apple.com/kr/app/pangyojangteo/id1018769995?l=ko&amp;ls=1&amp;mt=8">
+              <img alt="App Store" src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/header/apple-store-3a664174124650d63cae365bc55586fc5ff27b822b1b97788fc4af77d73d00c8.svg" />
+              <span>App Store</span>
+</a>          </li>
+          <li>
+            <a target="_blank" class="menu-anchor" id="header-download-button-android" href="https://play.google.com/store/apps/details?id=com.towneers.www">
+              <img alt="Google Play" src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/header/google-play-c9ad0fc573cd01e2b982df5de6709a3d8d7cec8d9b58a5c08db7da0b92a32a75.svg" />
+              <span>Google Play</span>
+</a>          </li>
+        </ul>
+      <a href="login.html" target="_blank">
+        <button class="chat-button">
+          <span class="button-text">로그인</span>
+        </button>
+      </a>
+    </section>
+    <nav id="gnb">
+      <!-- 버튼 생성 후 '메뉴열기' 텍스트 숨김 -->
+      <ul>
+        <li class="m1"> <!-- 상위 메뉴 ABOUT과 하위 메뉴 리스트-->
+          <a href="#" >사료/간식</a>
+          <ul> <!-- 상위 메뉴 ABOUT의 하위메뉴 각 하이퍼링크 #적용 -->
+            <li><a href="#">분유/이유식</a></li>
+            <li><a href="#">퍼피용</a></li>
+            <li><a href="#">성견용</a></li>
+            <li><a href="#">전연령</a></li>
+            <li><a href="#">노견용</a></li>
+            <li><a href="#">기능성</a></li>
+          </ul>
+        </li>
+        <li class="m2">  <!-- 상위 메뉴 MUSIC과 하위 메뉴 리스트 -->
+          <a href="#">위생용품</a>
+          <ul> <!-- 상위 메뉴 BOOK의 하위메뉴 -->
+            <li><a href="#">배변용품</a></li>
+            <li><a href="#">미용용품</a></li>
+            <li><a href="#">목욕용품</a></li>
+          </ul>
+        </li>
+        <li class="m3"> <!-- 상위 메뉴 COMMUNITY와 하위 메뉴 리스트-->
+          <a href="#">기타 용품</a>
+          <ul> <!-- 상위 메뉴 COMMUNITY의 하위메뉴 -->
+            <li><a href="#">장난감</a></li>
+            <li><a href="#">하우스/이동장</a></li>
+            <li><a href="#">패션/의류</a></li>
+            <li><a href="#">목줄/하네스</a></li>
+            <li><a href="#">반려인 용품</a></li>
+          </ul>
+        </li> 
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="home-main-section background-gray">
+  <div class="home-hot-content">
+    <section id="main-visual" class="rounded">
+			<ul class="main-visual-slide">  
+			<!-- bxSlider 슬라이드 플러그인 적용을 위해 ul 태그의 class 값에 main-visual-slide를 적용했음-->
+				<li>
+					<div class="visual-item-wrap item1"> <!-- 메인 비주얼 슬라이드 배너 1 -->
+					</div>
+				</li>
+				<li>
+					<div class="visual-item-wrap item2"> <!-- 메인 비주얼 슬라이드 배너 2 -->
+					</div>
+				</li>
+				<li>
+					<div class="visual-item-wrap item3"> <!-- 메인 비주얼 슬라이드 배너 3 -->
+					</div>
+				</li>
+			</ul>
+		</section>
+
+    <h1 class="home-main-title text-center home-hot-title">
+       도그마켓이 추천해요
+    </h1>
+    <div class="cards-wrap">
+      <article class="card-top ">
+  <a class="card-link " data-event-label="286125978" href="/articles/286125978">
+    <div class="card-photo ">
+        <img src="images/1.jpg" />
+    </div>
+    <div class="card-desc">
+      <h2 class="card-title">연어 순살스틱 판매합니다.</h2>
+      <div class="card-price ">
+        4,000원
+      </div>
+      <div class="card-region-name">
+        서울 강서구 화곡본동
+      </div>
+      <div class="card-counts">
+          <span>
+            관심 19
+          </span>
+        ∙
+        <span>
+            채팅 41
+          </span>
+      </div>
+    </div>
+</a></article>
+<article class="card-top ">
+  <a class="card-link " data-event-label="286218621" href="/articles/286218621">
+    <div class="card-photo ">
+        <img src="images/2.jpg" />
+    </div>
+    <div class="card-desc">
+      <h2 class="card-title">울타리 12피스 팝니다</h2>
+      <div class="card-price ">
+        10,000원
+      </div>
+      <div class="card-region-name">
+        서울 노원구 상계동
+      </div>
+      <div class="card-counts">
+          <span>
+            관심 8
+          </span>
+        ∙
+        <span>
+            채팅 36
+          </span>
+      </div>
+    </div>
+</a></article>
+<article class="card-top ">
+  <a class="card-link " data-event-label="286156726" href="/articles/286156726">
+    <div class="card-photo ">
+        <img src="images/3.jpg" />
+    </div>
+    <div class="card-desc">
+      <h2 class="card-title">각종 통조림 일괄</h2>
+      <div class="card-price ">
+        7,000원
+      </div>
+      <div class="card-region-name">
+        서울 양천구 신정6동
+      </div>
+      <div class="card-counts">
+          <span>
+            관심 8
+          </span>
+        ∙
+        <span>
+            채팅 24
+          </span>
+      </div>
+    </div>
+</a></article>
+<article class="card-top ">
+  <a class="card-link " data-event-label="286018287" href="/articles/286018287">
+    <div class="card-photo ">
+        <img src="images/4.jpg" />
+    </div>
+    <div class="card-desc">
+      <h2 class="card-title">강아지 가방 팝니다</h2>
+      <div class="card-price ">
+        25,000원
+      </div>
+      <div class="card-region-name">
+        부산 연제구 연산제4동
+      </div>
+      <div class="card-counts">
+          <span>
+            관심 3
+          </span>
+        ∙
+        <span>
+            채팅 27
+          </span>
+      </div>
+    </div>
+</a></article>
+
+<article class="card-top ">
+  <a class="card-link " data-event-label="286205365" href="/articles/286205365">
+    <div class="card-photo ">
+        <img src="images/5.jpg" />
+    </div>
+    <div class="card-desc">
+      <h2 class="card-title">노즈워크 팝니다 간식 소량 포함</h2>
+      <div class="card-price ">
+        9,000원
+      </div>
+      <div class="card-region-name">
+        경기도 수원시 권선구 곡반정동
+      </div>
+      <div class="card-counts">
+          <span>
+            관심 4
+          </span>
+        ∙
+        <span>
+            채팅 17
+          </span>
+      </div>
+    </div>
+</a></article>
+<article class="card-top ">
+  <a class="card-link " data-event-label="286234874" href="/articles/286234874">
+    <div class="card-photo ">
+        <img src="images/6.jpg" />
+    </div>
+    <div class="card-desc">
+      <h2 class="card-title">강아지 빗 중고 판매합니다.</h2>
+      <div class="card-price ">
+        5,000원
+      </div>
+      <div class="card-region-name">
+        경기도 화성시 목동
+      </div>
+      <div class="card-counts">
+          <span>
+            관심 3
+          </span>
+        ∙
+        <span>
+            채팅 21
+          </span>
+      </div>
+    </div>
+</a></article>
+<article class="card-top ">
+  <a class="card-link " data-event-label="286187061" href="/articles/286187061">
+    <div class="card-photo ">
+        <img src="images/7.jpg" />
+    </div>
+    <div class="card-desc">
+      <h2 class="card-title">강아지 연고 댕댕카솔 판매합니다.</h2>
+      <div class="card-price ">
+        8,000원
+      </div>
+      <div class="card-region-name">
+        서울 노원구 공릉1동
+      </div>
+      <div class="card-counts">
+          <span>
+            관심 6
+          </span>
+        ∙co
+        <span>
+            채팅 10
+          </span>
+      </div>
+    </div>
+</a></article>
+<article class="card-top ">
+  <a class="card-link " data-event-label="286139484" href="/articles/286139484">
+    <div class="card-photo ">
+        <img src="images/8.jpg">
+    </div>
+    <div class="card-desc">
+      <h2 class="card-title">강아지 나시</h2>
+      <div class="card-price ">
+        3,000원
+      </div>
+      <div class="card-region-name">
+        서울 강동구 고덕동
+      </div>
+      <div class="card-counts">
+          <span>
+            관심 5
+          </span>
+        ∙
+        <span>
+            채팅 16
+          </span>
+      </div>
+    </div>
+</a></article>
+
+    </div>
+    <div class="text-center">
+      <a class="text-bold text-black text-m" id="hot-articles-more" data-url="/hot_articles" href="/hot_articles"> 인기매물 더 보기</a>
+    </div>
+  </div>
+</section>
+
+
+<footer id="footer">
+  <div class="footer-container">
+    <div class="footer-top">
+      <ul class="footer-list">
+        <li class="footer-list-item"><a class="link-highlight" href="/trust">믿을 수 있는 중고거래</a></li>
+        <li class="footer-list-item"><a class="link-highlight" href="https://cs.kr.karrotmarket.com/wv/faqs">자주 묻는 질문</a></li>
+      </ul>
+      <ul class="footer-list">
+        <li class="footer-list-item"><a target="_blank" class="link-highlight" href="https://ad.daangn.com/">광고주센터</a></li>
+        <li class="footer-list-item">
+          <a target="_blank" class="ga-click" data-event-category="town_link_from" data-event-action="index_base" data-event-label="footer_town" href="https://town.daangn.com">동네가게</a>
+        </li>
+      </ul>
+      <ul class="footer-list">
+        <li class="footer-list-item"><a target="_blank" href="https://team.daangn.com/">회사 소개</a></li>
+        <li class="footer-list-item"><a target="_blank" href="https://team.daangn.com/jobs/">채용</a></li>
+      </ul>
+      <ul class="footer-list policy">
+        <li class="footer-list-item"><a target="_blank" href="https://policy.daangn.com/terms.html">이용약관</a></li>
+        <li class="footer-list-item"><a target="_blank" href="https://policy.daangn.com/privacy.html">개인정보처리방침</a></li>
+        <li class="footer-list-item"><a target="_blank" href="https://policy.daangn.com/location.html">위치기반서비스 이용약관</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <div id="copyright">
+        <ul class="copyright-list">
+          <li class="copyright-list-item">고객문의 <a href="mailto:cs@daangnservice.com">cs@daangnservice.com</a></li>
+          <li class="copyright-list-item">제휴문의 <a href="mailto:contact@daangn.com">contact@daangn.com</a></li>
+        </ul>
+        <ul class="copyright-list">
+          <li class="copyright-list-item">지역광고 <a href="mailto:ad@daangn.com">ad@daangn.com</a></li>
+          <li class="copyright-list-item">PR문의 <a href="mailto:pr@daangn.com">pr@daangn.com</a></li>
+        </ul>
+        <ul class="copyright-list copyright-list-light">
+          <li class="copyright-list-item"><address>서울특별시 구로구 디지털로 30길 28 609호 (당근서비스)</address></li>
+          <li class="copyright-list-item">사업자 등록번호 : 375-87-00088</li>
+          <li class="copyright-list-item">직업정보제공사업 신고번호 : J1200020200016</li>
+        </ul>
+        <div id="social">
+          <ul class="social-list">
+            <li class="social-list-item">
+              <a target="_blank" class="footer-social-link" href="https://www.facebook.com/daangn">
+                <img alt="facebook" src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/footer/icon-facebook-0563f4a93852d073b41f13b8bcabb03d47af3bb3a6755cdfedd8a73686c7f18c.svg" />
+                <span class="sr-only">facebook</span>
+</a>            </li>
+            <li class="social-list-item">
+              <a target="_blank" class="footer-social-link" href="https://www.instagram.com/daangnmarket/">
+                <img alt="instagram" src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/footer/icon-instagram-2f6c88a461597907c114b7ce28eab053fcae791ed26417915fefb6f7c9f95756.svg" />
+                <span class="sr-only">instagram</span>
+</a>            </li>
+            <li class="social-list-item">
+              <a target="_blank" class="footer-social-link" href="https://blog.naver.com/daangn">
+                <img alt="blog" src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/footer/icon-blog-e1b0d512d1766a6962ec5bbb5b0803d2a6a9c55ad97db5ba9eebb76013caceba.svg" />
+                <span class="sr-only">blog</span>
+</a>            </li>
+            <li class="global-links">
+              <img src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/footer/icon-global-2f53678b428ec623cefd07a90dd7777f3e55fc0433918f645d7d75ace6ff1fc3.png" width="24" height="24" />
+            </li>
+          </ul>
+        </div>
+        <div class="copyright-text">©Danggeun Market Inc.</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

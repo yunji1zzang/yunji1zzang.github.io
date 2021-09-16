@@ -1,0 +1,147 @@
+/* 반응형 웹 서비스 CSS설정 */
+@charset "utf-8";
+/* #main-visual 크기, 위치, 테두리, 배경색상, 마진 설정 */
+#main-visual{
+    width: 990px;/*633px*/
+    height: 570px;
+    background-color: #d7ecff;
+    margin-bottom: 100px;
+    float: left;
+    position: relative;
+}
+#main-visual .visual-item-wrap{
+    /*36px 73px 20px 294px*/
+    min-height: 1000px;
+    position: relative;
+}
+/* #main-visual 이미지, 이미지 크기, 이미지 위치 설정 */
+#main-visual .visual-item-wrap:after{
+    content: "";
+    width: 960px;/*173px*/
+    height: 780px;
+    position: absolute;
+    left: 0; /*75px*/
+    top: 0;
+/* 이미지 1 */
+    background: url(../images/11.PNG) 0 0 no-repeat;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+}
+/* 이미지 2 */
+#main-visual .visual-item-wrap.item2:after{
+    background-image: url(../images/22.PNG);
+}
+/* 이미지 3 */
+#main-visual .visual-item-wrap.item3:after{
+    background-image: url(../images/33.PNG);
+}
+/* #main-visual 타이틀 폰트 크기, 색상, 진하기 설정 */
+
+/* 첫번째 타이틀 글씨 색상 설정 */
+
+/* 타이틀 하단 마진 */
+#main-visual .visual-title + p{
+    margin-bottom: 39px;
+}
+
+    /* main.js의 jQuery 플러그인 : bxSlider 플러그인으로 생성한 
+    제어 버튼은 css를 사용해 적절한 모양과 위치를 적용함 */
+    /* #main-visual 내부 제어버튼 위치, 이미지, 마진 */
+#main-visual .bx-prev, #main-visual .bx-next{     
+    display: block;
+    width: 38px;
+    height: 86px;
+    background: url(../images/main/slider_sprites.png) 0 -122px no-repeat;
+    text-indent: -9999px;
+    position: absolute;
+    top: 50%;
+    margin-top: -43px;
+}
+/* #main-visual 좌측 위치 */
+#main-visual .bx-prev{
+    left: 10px;
+}
+/* #main-visual 우측 위치 */
+#main-visual .bx-next{
+    right: 10px;
+    -ms-background-position-y: -36px;
+    background-position-y: -38px;
+}
+#main-visual .bx-pager {text-align: center;position: absolute;width: 100%;bottom: 30px;left:0;}
+#main-visual .bx-pager-item{
+    display: inline;
+}
+#main-visual .bx-pager-link, #main-visual .bx-stop, #main-visual .bx-start{
+    display: inline-block;
+    width:35px;
+    height:18px;
+    background:url(../images/main/slider_sprites.png) center 0 no-repeat;
+    text-indent: -9999px;
+}
+#main-visual .bx-pager-link.active{
+    -ms-background-position-y: -19px;
+    background-position-y: -19px;
+}
+#main-visual .bx-controls-auto{
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    margin-left: 50px;
+}
+#main-visual .bx-stop{
+    -ms-background-position-y: -239px;
+    background-position-y: -239px;
+}
+#main-visual .bx-start{
+    -ms-background-position-y: -219px;
+    background-position-y: -219px;
+}
+
+/* 미디어 쿼리 */
+@media (max-width:800px) {
+    #main-visual, #notice-tab-wrap{
+        width: auto;
+        float: none;
+    }    
+    .best-book-list li.grid-item{
+        width: 46.42857142857143%;
+        text-align: center;
+    }
+    .best-book-list li:nth-child(5n){
+        clear: both;
+    }
+    .visual-item-wrap h4 + p {
+    word-break: keep-all;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;-webkit-line-clamp:3;
+    max-height:294px;overflow: hidden;}
+}
+@media (max-width:480px) {
+    #main-visual{height: auto;}
+    #main-visual .visual-item-wrap{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    #main-visual .visual-title{
+        margin-bottom: 82%;/*270px*/
+    }
+    #main-visual .visual-item-wrap:after{
+        width: 36.04166666666667%;
+        min-width:80px;
+        background-position-x: center;
+        left: 50%;
+        top: 70px;
+        transform:translateX(-50%);
+    }
+    #main-visual .visual-title + p{
+        margin-bottom: 10px;
+    }
+    #main-visual .visual-title + p + p{
+        margin-bottom: 50px;
+    }
+}
+@media (max-width:400px) {
+    #main-visual .visual-title{
+        margin-bottom: 96%;
+    }
+}
